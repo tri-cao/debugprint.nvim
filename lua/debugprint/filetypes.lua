@@ -10,7 +10,7 @@ local docker = vim.deepcopy(shell)
 docker.left = "RUN " .. docker.left
 
 local js = {
-    left = 'console.log("',
+    left = 'console.error("',
     right = '")',
     mid_var = '", ',
     right_var = ")",
@@ -81,7 +81,7 @@ return {
         left = 'print(f"',
         right = '", file=sys.stderr)',
         mid_var = "{",
-        right_var = '}", file=sys.stderr)',
+        right_var = '}")',
     },
     ["ruby"] = {
         left = 'STDERR.puts "',
